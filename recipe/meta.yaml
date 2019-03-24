@@ -1,4 +1,4 @@
-{% set version = '2.7.0' %}
+{% set version = '2.8.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,14 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: randomForestSRC_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/randomForestSRC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/randomForestSRC/randomForestSRC_{{ version }}.tar.gz
-  sha256: 2bcb2734f7a3f6e372bd234b2db23fc9c896e9663032c5f04babb54a2093988b
+  sha256: 9beb43fd4e9e2bfb1019e8862a8b521a0fef4f80027bb9ab9beb204f922b7ec9
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
-  skip: true  # [win32]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -58,10 +56,23 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - nick-youngblut
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+
+# Package: randomForestSRC
+# Version: 2.8.0
+# Date: 2019-01-02
+# Title: Random Forests for Survival, Regression, and Classification (RF-SRC)
+# Author: Hemant Ishwaran <hemant.ishwaran@gmail.com>, Udaya B. Kogalur <ubk@kogalur.com>
+# Maintainer: Udaya B. Kogalur <ubk@kogalur.com>
+# BugReports: https://github.com/kogalur/randomForestSRC/issues/new
+# Depends: R (>= 3.1.0),
+# Imports: parallel
+# Suggests: glmnet, survival, pec, prodlim, mlbench, akima, caret
+# Description: Fast OpenMP parallel processing for Breiman's random forests for survival, competing risks, regression and classification based on Ishwaran and Kogalur's popular random survival forests (RSF) package.  Handles missing data and now includes multivariate, unsupervised forests and quantile regression.  New fast interface using subsampling.
+# License: GPL (>= 3)
+# URL: http://web.ccs.miami.edu/~hishwaran http://www.kogalur.com https://github.com/kogalur/randomForestSRC
+# NeedsCompilation: yes
+# Packaged: 2019-01-02 15:40:12 UTC; kogalur
+# Repository: CRAN
+# Date/Publication: 2019-01-02 16:20:08 UTC
