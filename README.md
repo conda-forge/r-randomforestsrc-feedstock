@@ -3,7 +3,7 @@ About r-randomforestsrc
 
 Home: http://web.ccs.miami.edu/~hishwaran http://www.kogalur.com https://github.com/kogalur/randomForestSRC
 
-Package license: GPL-3
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-randomforestsrc-feedstock/blob/master/LICENSE.txt)
 
