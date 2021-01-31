@@ -1,4 +1,4 @@
-{% set version = "2.9.3" %}
+{% set version = "2.10.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/randomForestSRC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/randomForestSRC/randomForestSRC_{{ version }}.tar.gz
-  sha256: bc47bef9e5afade8fdf56e08ae0ad320e424dfa5b11a32cd2d166c9988dc2e16
+  sha256: 4e0be9628f773452979476b15aa63d03a1d3e679849d8ec2508b6b2344a8939d
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -47,14 +47,11 @@ test:
 about:
   home: http://web.ccs.miami.edu/~hishwaran http://www.kogalur.com https://github.com/kogalur/randomForestSRC
   license: GPL-3
-  summary: Fast OpenMP parallel computing of Breiman's random forests for survival, competing
-    risks, regression and classification based on Ishwaran and Kogalur's popular random
-    survival forests (RSF) package.  Handles missing data and now includes multivariate,
-    unsupervised forests, quantile regression and solutions for class imbalanced data.  New
-    fast interface using subsampling and confidence regions for variable importance.
+  summary: Fast OpenMP parallel computing of Breiman's random forests for survival, competing risks, regression and classification based on Ishwaran and Kogalur's popular random survival forests (RSF) package.  Handles missing data and now includes multivariate, unsupervised forests, quantile regression and solutions for
+    class imbalanced data.  New fast interface using subsampling and confidence regions for variable importance.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
