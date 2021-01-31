@@ -35,9 +35,13 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-diagrammer
+    - r-data.tree
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    - r-diagrammer
+    - r-data.tree
 
 test:
   commands:
@@ -46,7 +50,7 @@ test:
 
 about:
   home: http://web.ccs.miami.edu/~hishwaran http://www.kogalur.com https://github.com/kogalur/randomForestSRC
-  license: GPL-3
+  license: GPL-3.0-or-later
   summary: Fast OpenMP parallel computing of Breiman's random forests for survival, competing risks, regression and classification based on Ishwaran and Kogalur's popular random survival forests (RSF) package.  Handles missing data and now includes multivariate, unsupervised forests, quantile regression and solutions for
     class imbalanced data.  New fast interface using subsampling and confidence regions for variable importance.
   license_family: GPL3
