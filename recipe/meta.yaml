@@ -1,4 +1,4 @@
-{% set version = "3.2.1" %}
+{% set version = "3.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/randomForestSRC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/randomForestSRC/randomForestSRC_{{ version }}.tar.gz
-  sha256: 8548102482a724d2ecb1c249e1fbda18f9a9be3ad071c0e559412aac96537f2c
+  sha256: 0b39ed80b5a86ab902e707b3910ca24051331003a26cfd6f81db52faf38157cb
 
 build:
   merge_build_host: true  # [win]
