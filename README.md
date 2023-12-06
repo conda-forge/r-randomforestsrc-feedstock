@@ -3,6 +3,7 @@ About r-randomforestsrc-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-randomforestsrc-feedstock/blob/main/LICENSE.txt)
 
+
 About r-randomforestsrc
 -----------------------
 
@@ -11,6 +12,7 @@ Home: http://web.ccs.miami.edu/~hishwaran http://www.kogalur.com https://github.
 Package license: GPL-3.0-or-later
 
 Summary: Fast OpenMP parallel computing of Breiman's random forests for survival, competing risks, regression and classification based on Ishwaran and Kogalur's popular random survival forests (RSF) package.  Handles missing data and now includes multivariate, unsupervised forests, quantile regression and solutions for class imbalanced data.  New fast interface using subsampling and confidence regions for variable importance.
+
 About r-randomforestsrc
 -----------------------
 
@@ -146,7 +148,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
