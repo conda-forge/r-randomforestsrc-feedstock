@@ -1,4 +1,4 @@
-{% set version = "3.7.0" %}
+{% set version = "3.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/randomForestSRC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/randomForestSRC/randomForestSRC_{{ version }}.tar.gz
-  sha256: 2dfc8665109d2e68f20a423a7aa6481148ece9cc9f98ff6010b13f0225f99736
+  sha256: 2aa2d0770df07ebb2820b0057ce3bbc978d3429c8185d2a07358c912675a466c
 
 build:
   # Checking windows to see if it passes. Uncomment the line if it fails.
